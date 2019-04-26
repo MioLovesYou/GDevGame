@@ -1,0 +1,2326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project firstLayout="">
+    <gdVersion build="92" major="4" minor="0" revision="1" />
+    <properties folderProject="false" linuxExecutableFilename="" macExecutableFilename="" packageName="com.example.gamename" useExternalSourceFiles="false" winExecutableFilename="" winExecutableIconFile="">
+        <name>Project</name>
+        <author></author>
+        <windowWidth>800</windowWidth>
+        <windowHeight>600</windowHeight>
+        <latestCompilationDirectory></latestCompilationDirectory>
+        <maxFPS>60</maxFPS>
+        <minFPS>10</minFPS>
+        <verticalSync>false</verticalSync>
+        <extensions>
+            <extension name="BuiltinObject" />
+            <extension name="BuiltinAudio" />
+            <extension name="BuiltinVariables" />
+            <extension name="BuiltinTime" />
+            <extension name="BuiltinMouse" />
+            <extension name="BuiltinKeyboard" />
+            <extension name="BuiltinJoystick" />
+            <extension name="BuiltinCamera" />
+            <extension name="BuiltinWindow" />
+            <extension name="BuiltinFile" />
+            <extension name="BuiltinNetwork" />
+            <extension name="BuiltinScene" />
+            <extension name="BuiltinAdvanced" />
+            <extension name="Sprite" />
+            <extension name="BuiltinCommonInstructions" />
+            <extension name="BuiltinCommonConversions" />
+            <extension name="BuiltinStringInstructions" />
+            <extension name="BuiltinMathematicalTools" />
+            <extension name="BuiltinExternalLayouts" />
+            <extension name="TextObject" />
+        </extensions>
+        <platforms>
+            <platform name="GDevelop C++ platform" />
+        </platforms>
+        <currentPlatform>GDevelop C++ platform</currentPlatform>
+    </properties>
+    <resources>
+        <resources>
+            <resource alwaysLoaded="false" file="Assets/Background.png" kind="image" name="Background.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Boat.png" kind="image" name="Boat.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Border.png" kind="image" name="Border.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Fish1.png" kind="image" name="Fish1.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Fish2.png" kind="image" name="Fish2.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Fish3.png" kind="image" name="Fish3.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Fish4.png" kind="image" name="Fish4.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/foreBackground.png" kind="image" name="foreBackground.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Hook.png" kind="image" name="Hook.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Mine.png" kind="image" name="Mine.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Sheryl.png" kind="image" name="Sheryl.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Title.png" kind="image" name="Title.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/HookWire.png" kind="image" name="HookWire.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Assets/Explosion.png" kind="image" name="Explosion.png" smoothed="true" userAdded="true" />
+        </resources>
+        <resourceFolders />
+    </resources>
+    <objects />
+    <objectsGroups />
+    <variables>
+        <variable name="levels" value="1" />
+    </variables>
+    <layouts>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="menu" name="menu" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="0.508637" />
+            <objectsGroups>
+                <group name="Menu assets">
+                    <objects />
+                </group>
+            </objectsGroups>
+            <variables>
+                <variable name="force" value="0" />
+            </variables>
+            <instances>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="startGame" width="0.000000" x="352.000000" y="192.000000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="tutorial" width="0.000000" x="352.000000" y="224.000000" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="guide" width="0.000000" x="352.000000" y="256.000000" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="446.935669" layer="" locked="false" name="title" width="797.392151" x="2.716928" y="-124.739685" zOrder="5">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Sheryl" width="0.000000" x="803.037964" y="375.692505" zOrder="6">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Borderleft" width="0.000000" x="-207.506012" y="-3.824608" zOrder="7">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Borderight" width="0.000000" x="1025.200317" y="-1.858574" zOrder="8">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Background" width="0.000000" x="0.894173" y="0.179092" zOrder="-1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="New layer" locked="false" name="Highlighter" width="0.000000" x="0.894119" y="-3.604065" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object bold="false" italic="false" name="startGame" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Start Game</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object bold="false" italic="false" name="tutorial" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Tutorial</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object bold="false" italic="false" name="guide" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Guide</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object name="title" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="true" image="Title.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="960.000000" y="524.000000" />
+                                                    <vertice x="960.000000" y="524.000000" />
+                                                    <vertice x="960.000000" y="556.000000" />
+                                                    <vertice x="960.000000" y="556.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Sheryl" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Sheryl.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Borderight" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Border.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Borderleft" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Border.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Background.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Highlighter" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="foreBackground.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="SourisBouton" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Left</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="SourisSurObjet" />
+                            <parameters>
+                                <parameter>startGame</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;levelOne&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="SourisBouton" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Left</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="SourisSurObjet" />
+                            <parameters>
+                                <parameter>tutorial</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;tutorial&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="SourisBouton" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Left</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="SourisSurObjet" />
+                            <parameters>
+                                <parameter>guide</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;guide&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="SourisBouton" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Left</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="SourisSurObjet" />
+                            <parameters>
+                                <parameter>exit</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Quit" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Loop</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DepartScene" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Opacity" />
+                            <parameters>
+                                <parameter>title</parameter>
+                                <parameter>+</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="true" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.05</parameter>
+                                <parameter>&quot;titleOpacity&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;titleOpacity&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Opacity" />
+                                    <parameters>
+                                        <parameter>title</parameter>
+                                        <parameter>&lt;</parameter>
+                                        <parameter>50</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Opacity" />
+                                    <parameters>
+                                        <parameter>title</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>5</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Opacity" />
+                                    <parameters>
+                                        <parameter>title</parameter>
+                                        <parameter>&gt;</parameter>
+                                        <parameter>200</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Opacity" />
+                                    <parameters>
+                                        <parameter>title</parameter>
+                                        <parameter>-</parameter>
+                                        <parameter>5</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Swim</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DepartScene" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>force</parameter>
+                                <parameter>=</parameter>
+                                <parameter>-50</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>Sheryl</parameter>
+                                <parameter>Variable(force) * (Random(5) + Random(100) / 100)</parameter>
+                                <parameter>0</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Egal" />
+                            <parameters>
+                                <parameter>Random(100)</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>50</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>Sheryl</parameter>
+                                <parameter>0</parameter>
+                                <parameter>Random(2) * (Random(100) / 100)&#x0A;</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Egal" />
+                            <parameters>
+                                <parameter>Random(100)</parameter>
+                                <parameter>&lt;</parameter>
+                                <parameter>50</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>Sheryl</parameter>
+                                <parameter>0</parameter>
+                                <parameter>-1 * (Random(2) * (Random(100) / 100)&#x0A;)</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Borderleft</parameter>
+                                <parameter>Sheryl</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>force</parameter>
+                                <parameter>=</parameter>
+                                <parameter>50</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="FlipX" />
+                            <parameters>
+                                <parameter>Sheryl</parameter>
+                                <parameter>yes</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Borderight</parameter>
+                                <parameter>Sheryl</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>force</parameter>
+                                <parameter>=</parameter>
+                                <parameter>-50</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="FlipX" />
+                            <parameters>
+                                <parameter>Sheryl</parameter>
+                                <parameter>no</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+                <layer name="New layer" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="tutorial" name="tutorial" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances />
+            <objects />
+            <events />
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="guide" name="guide" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances />
+            <objects />
+            <events />
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="levelOne" name="levelOne" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="0.807422" />
+            <objectsGroups />
+            <variables>
+                <variable name="force" value="0" />
+                <variable name="maxFish" value="0" />
+                <variable name="score" value="0" />
+                <variable name="chosenFish" value="0" />
+                <variable name="currentFish" value="0" />
+                <variable name="lives" value="3" />
+            </variables>
+            <instances>
+                <instance angle="0.000000" customSize="true" height="88.000000" layer="" locked="false" name="Mine" width="88.000000" x="373.802429" y="414.655273" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="foreBackground" width="0.000000" x="1.054657" y="0.034149" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="borderRight" width="0.000000" x="942.000000" y="2.499992" zOrder="5">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="borderLeft" width="0.000000" x="-116.999985" y="3.500000" zOrder="10">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Boat" width="0.000000" x="330.000000" y="125.500000" zOrder="14">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="fish" width="0.000000" x="879.247253" y="332.937225" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Background" width="0.000000" x="-0.461273" y="1.416576" zOrder="-1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Hook" width="0.000000" x="402.275818" y="283.575989" zOrder="15">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="HookWire" width="0.000000" x="413.844727" y="186.046646" zOrder="16">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Score" width="0.000000" x="1.200090" y="51.816860" zOrder="17">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Lives" width="0.000000" x="3.677101" y="83.015549" zOrder="18">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object name="Background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Background.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.000000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Mine" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="true" image="Mine.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="100.000000" y="100.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="21.000000" y="102.000000" />
+                                                    <vertice x="60.000000" y="36.000000" />
+                                                    <vertice x="102.000000" y="12.000000" />
+                                                    <vertice x="165.000000" y="34.000000" />
+                                                    <vertice x="179.000000" y="94.000000" />
+                                                    <vertice x="169.000000" y="138.000000" />
+                                                    <vertice x="147.000000" y="166.000000" />
+                                                    <vertice x="97.000000" y="183.000000" />
+                                                    <vertice x="43.000000" y="165.000000" />
+                                                </polygon>
+                                                <polygon>
+                                                    <vertice x="100.000000" y="-26660517160498919112704.000000" />
+                                                    <vertice x="100.000000" y="-26660517160498919112704.000000" />
+                                                    <vertice x="100.000000" y="26660517160498919112704.000000" />
+                                                    <vertice x="100.000000" y="26660517160498919112704.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="foreBackground" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="foreBackground.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.000000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="fish" type="Sprite">
+                    <variables>
+                        <variable name="turn" value="0" />
+                        <variable name="value" value="0" />
+                    </variables>
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Fish1.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="25.000000" y="25.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="50.000000" y="0.000000" />
+                                                    <vertice x="50.000000" y="50.000000" />
+                                                    <vertice x="0.000000" y="50.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Fish2.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="25.000000" y="25.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="50.000000" y="0.000000" />
+                                                    <vertice x="50.000000" y="50.000000" />
+                                                    <vertice x="0.000000" y="50.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Fish3.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="25.000000" y="25.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="50.000000" y="0.000000" />
+                                                    <vertice x="50.000000" y="50.000000" />
+                                                    <vertice x="0.000000" y="50.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="borderLeft" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Border.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="5.000000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="10.000000" y="0.000000" />
+                                                    <vertice x="10.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="borderRight" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Border.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="5.000000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="10.000000" y="0.000000" />
+                                                    <vertice x="10.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Boat" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Boat.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="78.500000" y="36.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="157.000000" y="0.000000" />
+                                                    <vertice x="157.000000" y="73.000000" />
+                                                    <vertice x="0.000000" y="73.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="HookWire" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="HookWire.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="1.000000" y="50.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="2.000000" y="0.000000" />
+                                                    <vertice x="2.000000" y="100.000000" />
+                                                    <vertice x="0.000000" y="100.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Hook" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="true" image="Hook.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="12.500000" y="12.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="3.000000" y="13.000000" />
+                                                    <vertice x="11.000000" y="5.000000" />
+                                                    <vertice x="18.000000" y="1.000000" />
+                                                    <vertice x="21.000000" y="19.000000" />
+                                                    <vertice x="11.000000" y="23.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object bold="false" italic="false" name="Score" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Score: 0</string>
+                    <font></font>
+                    <characterSize>30</characterSize>
+                    <color b="0" g="0" r="0" />
+                </object>
+                <object bold="false" italic="false" name="Lives" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Lives: 0</string>
+                    <font></font>
+                    <characterSize>30</characterSize>
+                    <color b="0" g="0" r="0" />
+                </object>
+                <object name="explosion" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Explosion.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="112.500000" y="112.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="225.000000" y="0.000000" />
+                                                    <vertice x="225.000000" y="225.000000" />
+                                                    <vertice x="0.000000" y="225.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Initiation of values&#x0A;</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DepartScene" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>maxFish</parameter>
+                                <parameter>=</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>score</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>chosenFish</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>currentFish</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>lives</parameter>
+                                <parameter>=</parameter>
+                                <parameter>3</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>Lives</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Lives: &quot; + VariableString(lives)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>Score</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Score: &quot; + VariableString(score)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Explosion&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Swim</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>borderLeft</parameter>
+                                <parameter>fish</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarObjet" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>turn</parameter>
+                                <parameter>=</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>borderRight</parameter>
+                                <parameter>fish</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarObjet" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>turn</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarObjet" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>turn</parameter>
+                                <parameter>=</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="FlipX" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>yes</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>50</parameter>
+                                <parameter>0</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarObjet" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>turn</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="FlipX" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>no</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>-50</parameter>
+                                <parameter>0</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Egal" />
+                            <parameters>
+                                <parameter>Random(100)</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>50</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>0</parameter>
+                                <parameter>Random(2) * (Random(100) / 100)&#x0A;</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Egal" />
+                            <parameters>
+                                <parameter>Random(100)</parameter>
+                                <parameter>&lt;</parameter>
+                                <parameter>50</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>Variable(force) * (Random(5) + Random(100) / 100)</parameter>
+                                <parameter>0</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions>
+                        <action>
+                            <type inverted="false" value="AddForceXY" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>0</parameter>
+                                <parameter>-1 * (Random(2) * (Random(100) / 100)&#x0A;)</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Fish spawn</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::And" />
+                            <parameters />
+                            <subConditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>1</parameter>
+                                        <parameter>&quot;Spawn&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="VarScene" />
+                                    <parameters>
+                                        <parameter>maxFish</parameter>
+                                        <parameter>!=</parameter>
+                                        <parameter>Variable(currentFish)</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </subConditions>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Spawn&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Create" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>fish</parameter>
+                                <parameter>812</parameter>
+                                <parameter>Random(360) + 210</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>chosenFish</parameter>
+                                <parameter>=</parameter>
+                                <parameter>Random(2)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ChangeAnimation" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>=</parameter>
+                                <parameter>Variable(chosenFish)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarObjet" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>value</parameter>
+                                <parameter>=</parameter>
+                                <parameter>10 * Variable(chosenFish) + 10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>currentFish</parameter>
+                                <parameter>+</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DepartScene" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ChangeAnimation" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>=</parameter>
+                                <parameter>Random(3)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Hook</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Hook Up / Down</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::And" />
+                            <parameters />
+                            <subConditions>
+                                <condition>
+                                    <type inverted="false" value="KeyReleased" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>Down</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="PosY" />
+                                    <parameters>
+                                        <parameter>Hook</parameter>
+                                        <parameter>&lt;=</parameter>
+                                        <parameter>500</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </subConditions>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ChangeScaleHeight" />
+                            <parameters>
+                                <parameter>HookWire</parameter>
+                                <parameter>+</parameter>
+                                <parameter>0.1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="MettreY" />
+                            <parameters>
+                                <parameter>Hook</parameter>
+                                <parameter>+</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::And" />
+                            <parameters />
+                            <subConditions>
+                                <condition>
+                                    <type inverted="false" value="KeyReleased" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>Up</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="PosY" />
+                                    <parameters>
+                                        <parameter>Hook</parameter>
+                                        <parameter>&gt;=</parameter>
+                                        <parameter>210</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </subConditions>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ChangeScaleHeight" />
+                            <parameters>
+                                <parameter>HookWire</parameter>
+                                <parameter>-</parameter>
+                                <parameter>0.1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="MettreY" />
+                            <parameters>
+                                <parameter>Hook</parameter>
+                                <parameter>-</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Hook Left / Right</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::And" />
+                            <parameters />
+                            <subConditions>
+                                <condition>
+                                    <type inverted="false" value="KeyReleased" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>Right</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="PosX" />
+                                    <parameters>
+                                        <parameter>Hook</parameter>
+                                        <parameter>&lt;</parameter>
+                                        <parameter>600</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </subConditions>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="MettreX" />
+                            <parameters>
+                                <parameter>Hook</parameter>
+                                <parameter>+</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="MettreX" />
+                            <parameters>
+                                <parameter>HookWire</parameter>
+                                <parameter>+</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::And" />
+                            <parameters />
+                            <subConditions>
+                                <condition>
+                                    <type inverted="false" value="KeyReleased" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>Left</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="false" value="PosX" />
+                                    <parameters>
+                                        <parameter>Hook</parameter>
+                                        <parameter>&lt;</parameter>
+                                        <parameter>600</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </subConditions>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="MettreX" />
+                            <parameters>
+                                <parameter>Hook</parameter>
+                                <parameter>-</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="MettreX" />
+                            <parameters>
+                                <parameter>HookWire</parameter>
+                                <parameter>-</parameter>
+                                <parameter>10</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Hook / Fish collision</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Collision" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter>Hook</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>Score</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Score: &quot; + VariableString(score)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>score</parameter>
+                                <parameter>+</parameter>
+                                <parameter>fish.Variable(value)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>fish</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Hook / Mine collision</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Collision" />
+                            <parameters>
+                                <parameter>Hook</parameter>
+                                <parameter>Mine</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>lives</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>Lives</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Lives: &quot; + VariableString(lives)</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Create" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>explosion</parameter>
+                                <parameter>Mine.PointX(centre) - 100</parameter>
+                                <parameter>Mine.PointY(centre) - 100</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Mine</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Explosion&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.5</parameter>
+                                <parameter>&quot;Explosion&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Explosion&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>explosion</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="New layer" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="options" name="options" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances />
+            <objects />
+            <events />
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="gameOver" name="gameOver" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="background" width="0.000000" x="-1.000000" y="0.500000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="failed" width="0.000000" x="179.000000" y="250.500000" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="fish" width="0.000000" x="718.000000" y="479.500000" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="fish2" width="0.000000" x="55.999992" y="353.500000" zOrder="4">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="fish3" width="0.000000" x="228.000000" y="512.500000" zOrder="5">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object name="background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Background.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object bold="false" italic="false" name="failed" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>You Failed!</string>
+                    <font></font>
+                    <characterSize>90</characterSize>
+                    <color b="0" g="128" r="255" />
+                </object>
+                <object name="fish" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Fish1.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="fish2" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Fish2.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="fish3" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Fish3.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Comment</type>
+                    <color b="109" g="230" r="255" textB="0" textG="0" textR="0" />
+                    <comment>Level Restart</comment>
+                    <comment2></comment2>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>10</parameter>
+                                <parameter>&quot;Over&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="VarGlobal" />
+                                    <parameters>
+                                        <parameter>levels</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>1</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Scene" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;levelOne&quot;</parameter>
+                                        <parameter>true</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="VarGlobal" />
+                                    <parameters>
+                                        <parameter>levels</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>2</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Scene" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;levelTwo&quot;</parameter>
+                                        <parameter>true</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="VarGlobal" />
+                                    <parameters>
+                                        <parameter>levels</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>3</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Scene" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;levelThree&quot;</parameter>
+                                        <parameter>true</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="VarGlobal" />
+                                    <parameters>
+                                        <parameter>levels</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>4</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Scene" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;levelFour&quot;</parameter>
+                                        <parameter>true</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="VarGlobal" />
+                                    <parameters>
+                                        <parameter>levels</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>5</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Scene" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;levelFive&quot;</parameter>
+                                        <parameter>true</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+    </layouts>
+    <externalEvents />
+    <externalLayouts />
+    <externalSourceFiles />
+</project>
